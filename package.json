@@ -1,0 +1,19 @@
+{
+  "name": "raymathew.com_v2",
+  "version": "1.0.0",
+  "description": "My website, built with improved skills 1 year later",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RayMathew/raymathew.com_v2.git"
+  },
+  "author": "Ray Mathew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RayMathew/raymathew.com_v2/issues"
+  },
+  "homepage": "https://github.com/RayMathew/raymathew.com_v2#readme"
+}
