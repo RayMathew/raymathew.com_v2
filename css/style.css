@@ -2,3 +2,78 @@
     margin: 0;
     padding: 0;
 }
+
+body{
+    font-family: sans-serif;
+    background-color: #0E1316;
+}
+
+.profile-container {
+    height: 100vh;
+    position: relative;
+}
+
+.intro {
+    position: absolute;
+    top: 30%;
+    left: 12%;
+    color: white;
+    width: auto;
+    max-width: 0%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: reveal-intro 1.5s linear forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes reveal-intro {
+    from {
+        max-width: 0%;
+    }
+    to {
+        max-width: 100%;
+    }
+}
+
+.name {
+    font-family: "Roboto Condensed";
+    top: 50%;
+    left: 20%;
+    font-size: 54px;
+}
+
+.divider {
+    height: 5px;
+    width: 200px;
+    background-color: #ed093e;
+    margin: 10px 0px;
+}
+
+.description {
+    margin: 20px 0px;
+}
+
+.icons-container {
+    background-color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 12px;
+    border-radius: 7px;
+}
+
+.icons-container a {
+    display: inline-block;
+}
+
+.icons-container img {
+    height: 100px;
+    width: 100px;
+    margin: 10px 30px;
+    transition: transform 0.2s;
+}
+
+.icons-container img:hover {
+    transform: scale(1.2);
+}
