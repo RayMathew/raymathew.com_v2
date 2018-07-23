@@ -18,20 +18,26 @@ body{
     top: 30%;
     left: 12%;
     color: white;
+    transform: translateX(-10%);
     width: auto;
-    max-width: 0%;
-    white-space: nowrap;
+    opacity: 0;
+    /* max-width: 0%; */
+    /* white-space: nowrap; */
     overflow: hidden;
-    animation: reveal-intro 1.5s linear forwards;
+    animation: reveal-intro 0.3s linear forwards;
     animation-delay: 0.5s;
 }
 
 @keyframes reveal-intro {
     from {
-        max-width: 0%;
+        /* max-width: 0%; */
+        opacity: 0;
+        transform: translateX(-10%);
     }
     to {
-        max-width: 100%;
+        /* max-width: 100%; */
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
