@@ -5,7 +5,7 @@
 
 body{
     font-family: sans-serif;
-    background-color: #0E1316;
+    background-color: black;
 }
 
 .profile-container {
@@ -63,23 +63,31 @@ body{
     transform: translateX(50%);
 }
 
+@media (max-width: 480px) {
+    .intro {
+        top: 10% !important;
+    }
+    .profile-links {
+        top: 40% !important;
+    }
+}
+
 .rotatingborder {
     background: transparent;
     border-radius: 50%;
     border: 4px solid;
-    /* border-image: linear-gradient(to bottom, black 0%, white 100%); */
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    animation: rotate 30s infinite linear;
+    animation: rotate 40s infinite linear;
 }
 
-.rotatingborder.github { border-color: rebeccapurple; border-bottom-color: #0E1316;}
-.rotatingborder.stackoverflow { border-color: lightcoral; border-right-color: #0E1316;}
-.rotatingborder.linkedin { border-color: cornflowerblue; border-top-color: #0E1316;}
-.rotatingborder.quora { border-color: red; border-left-color: #0E1316;}
+.rotatingborder.github { border-color: rebeccapurple; border-bottom-style: dashed;}
+.rotatingborder.stackoverflow { border-color: lightcoral; border-right-style: dashed;}
+.rotatingborder.linkedin { border-color: cornflowerblue; border-top-style: dashed;}
+.rotatingborder.quora { border-color: red; border-left-style: dashed;}
 
 @-webkit-keyframes rotate {
   from {
@@ -96,9 +104,18 @@ body{
     height: 50px;
     padding: 10px;
     margin: 20px 0;
-    display: block;
-    /* border-radius: 50%; */
-    /* border: 1px solid white; */
+}
+
+@media (min-width: 481px) {
+    .profile-links a {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-links a {
+        display: inline-block;
+    }
 }
 
 .profile-links img {
@@ -106,10 +123,12 @@ body{
     height: 50px;
 }
 
-.stackoverflow ~ img {
-    width: 42px;
-    height: 42px;
-    margin: 0 4px;
+@media (min-width: 481px) {
+    .stackoverflow ~ img {
+        width: 42px;
+        height: 42px;
+        margin: 0 4px;
+    }
 }
 
 .icons-container {
