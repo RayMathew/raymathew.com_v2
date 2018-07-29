@@ -13,32 +13,31 @@ body{
     position: relative;
 }
 
-.intro {
+.profile-container > div {
     position: absolute;
     top: 30%;
-    left: 12%;
-    color: white;
-    transform: translateX(-10%);
     width: auto;
     opacity: 0;
-    /* max-width: 0%; */
-    /* white-space: nowrap; */
     overflow: hidden;
-    animation: reveal-intro 0.3s linear forwards;
+    animation: reveal-profile 0.3s linear forwards;
     animation-delay: 0.5s;
 }
 
-@keyframes reveal-intro {
+@keyframes reveal-profile {
     from {
-        /* max-width: 0%; */
         opacity: 0;
-        transform: translateX(-10%);
     }
     to {
-        /* max-width: 100%; */
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+.intro {
+    left: 12%;
+    color: white;
+    transform: translateX(-10%);
+
 }
 
 .name {
@@ -57,6 +56,60 @@ body{
 
 .description {
     margin: 20px 0px;
+}
+
+.profile-links {
+    right: 12%;
+    transform: translateX(50%);
+}
+
+.rotatingborder {
+    background: transparent;
+    border-radius: 50%;
+    border: 4px solid;
+    /* border-image: linear-gradient(to bottom, black 0%, white 100%); */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: rotate 30s infinite linear;
+}
+
+.rotatingborder.github { border-color: rebeccapurple; border-bottom-color: #0E1316;}
+.rotatingborder.stackoverflow { border-color: lightcoral; border-right-color: #0E1316;}
+.rotatingborder.linkedin { border-color: cornflowerblue; border-top-color: #0E1316;}
+.rotatingborder.quora { border-color: red; border-left-color: #0E1316;}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.profile-links a {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin: 20px 0;
+    display: block;
+    /* border-radius: 50%; */
+    /* border: 1px solid white; */
+}
+
+.profile-links img {
+    width: 50px;
+    height: 50px;
+}
+
+.stackoverflow ~ img {
+    width: 42px;
+    height: 42px;
+    margin: 0 4px;
 }
 
 .icons-container {
